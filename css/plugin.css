@@ -1,0 +1,271 @@
+.kaytest{
+	font-size: 10px;
+	color: red;
+}
+#fixed-banner > div > a:hover {
+			color: transparent;
+			text-transform: none;
+		}
+
+		#mobile-banner > div > a:hover {
+			color: transparent;
+			text-transform: none;
+		}
+		
+		#fixed-banner > div {
+			width: 100px;
+			height: 100px;
+			margin-right: 10px;
+			display: inline-block;
+		}
+
+		#fixed-banner {
+			position: fixed;
+			left: 0;
+			bottom: -200px;
+			width: 100%;
+			height: 100px;
+			background-repeat: no-repeat;
+			background-size: contain;
+			display: none;
+			background-color: #222;
+			overflow: hidden;
+			z-index: 9999;
+		}
+
+		.mobile-banner {
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100px;
+			height: 100px;			
+			background-color: #222;
+			overflow: hidden;
+			z-index: 9999;
+			display: none;
+		}
+
+		.mobile-banner > div {
+			position: absolute;
+			top: 0;
+			left: 100%;
+			width: 100%;
+			height: 100%;
+			display: none;
+			background-color: #222;
+		}
+
+		.banner-close {
+			position: absolute;
+			top: -5px;
+			right: 0;
+			color: white;
+			font-size: 12px;
+			font-weight: 600;
+			background-color: #000;
+			padding: 3px;
+			z-index: 2;
+			cursor: pointer;
+			display: none;
+		}
+
+		.fixed-image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			color: white;
+			font-size: 12px;
+			font-weight: 600;
+			z-index: -1;				
+			display: none;
+		}		
+		
+		@media only screen and (min-width: 1000px) {
+			#fixed-banner {
+				position: fixed;
+				left: 0;
+				bottom: -200px;
+				width: 100%;
+				height: 100px;
+				background-image: url(./bg.png);
+				background-repeat: no-repeat;
+				background-size: contain;
+				display: block;
+				background-color: #222;
+				overflow: hidden;
+				z-index: 9999;
+			}
+
+			.mobile-banner {
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 100px;
+				height: 100px;			
+				background-color: #222;
+				overflow: hidden;
+				z-index: 9999;
+				display: none;
+			}
+
+			.mobile-banner > div {
+				position: absolute;
+				top: 0;
+				left: 100%;
+				width: 100%;
+				height: 100%;
+				display: none;
+				background-color: #222;
+			}
+
+			.banner-close {
+				position: absolute;
+				top: -5px;
+				right: 0;
+				color: white;
+				font-size: 12px;
+				font-weight: 600;
+				background-color: #000;
+				padding: 3px;
+				z-index: 2;
+				cursor: pointer;
+				display: none;
+			}
+
+			#fixed-banner > img {
+				width: 100%;
+				position: absolute;
+				height: 100px;
+				color: white;
+				font-size: 12px;
+				font-weight: 600;
+				z-index: -1;
+			}
+		}
+		
+		
+		@media only screen and (max-width: 425px) {
+			#fixed-banner {
+				position: fixed;
+				left: 0;
+				bottom: -200px;
+				width: 100%;
+				height: 100px;
+				background-image: url(./bg.png);
+				background-repeat: no-repeat;
+				background-size: contain;
+				display: none;
+				background-color: #222;
+				overflow: hidden;
+				z-index: 9999;
+			}
+
+			.mobile-banner {
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 100px;
+				height: 100px;			
+				background-color: #222;
+				overflow: hidden;
+				z-index: 9999;
+				display: block;
+			}
+
+			.mobile-banner > div {
+				position: absolute;
+				top: 0;
+				left: 100%;
+				width: 100%;
+				height: 100%;
+				display: block;
+				z-index: 1;
+				background-color: #222;
+			}
+
+			.banner-close {
+				position: absolute;
+				top: -5px;
+				right: 0;
+				color: white;
+				font-size: 12px;
+				font-weight: 600;
+				background-color: #000;
+				padding: 3px;
+				cursor: pointer;
+				z-index: 2;
+				display: block;
+			}
+
+			#fixed-banner > img {
+				width: 100%;
+				position: absolute;
+				height: 100px;
+				color: white;
+				font-size: 12px;
+				font-weight: 600;
+				z-index: -1;
+			}
+		}
+		
+		@keyframes slidebanner {
+			from {
+				bottom: -200px;
+			}
+
+			to {
+				bottom:  1px;
+			}
+		}
+
+		@-webkit-keyframes slidebanner {
+			from {
+				bottom: -200px;
+			}
+
+			to {
+				bottom:  1px;
+			}
+		}
+		
+		@keyframes backbanner {
+			from {
+				bottom: 1px;
+			}
+
+			to {
+				bottom:  -200px;
+			}
+		}
+
+		@-webkit-keyframes backbanner {
+			from {
+				bottom: 1px;
+			}
+
+			to {
+				bottom:  -200px;
+			}
+		}
+
+		@keyframes come-in {
+			from {left : 100%;}
+			to {left : 0px;}
+		}
+
+		@-webkit-keyframes come-in {
+			from {left : 100%;}
+			to {left : 0px;}
+		}
+
+		@keyframes come-out {
+			from {left : 0px;}
+			to {left : -100%;}
+		}
+
+		@-webkit-keyframes come-out {
+			from {left : 0px;}
+			to {left : -100%;}
+		} 
